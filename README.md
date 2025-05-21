@@ -17,5 +17,5 @@ npm test
 - `cypress/e2e/`: Archivos de pruebas
 - `cypress/fixtures/`: Datos de prueba
 - `cypress/support/`: Comandos personalizados y configuraciones
-- `TEMPLATECYPRESS/PromptQA.txt`: Prompt de QA experto eb pruebas automatizadas con Cypress (Para usar con copilot)
+- `TEMPLATECYPRESS/PromptQA.txt`: Prompt de QA experto en pruebas automatizadas con Cypress (Para usar con copilot)
 - `TEMPLATECYPRESS/notas.txt` : Lista de comandos de git/gitbahs y  comandos mas usados en Cypress
