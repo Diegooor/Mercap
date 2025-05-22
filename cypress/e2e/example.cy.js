@@ -1,6 +1,9 @@
 describe('Mi primera prueba en Cypress', () => {
-    it('Visita Google y busca "Cypress"', () => {
-    cy.visit('https://www.google.com');
-    cy.get('input[name="q"]').type('Cypress{enter}');
+    it('Visitar toolsqa y buscar Cypress', () => {
+        cy.visit('https://toolsqa.com/')
+        cy.get('[placeholder="Search"]:eq(1)')
+        .type('Cypress{enter}');
+        cy.url().should('include', 'Cypress');
+
     });
 });

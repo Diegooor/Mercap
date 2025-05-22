@@ -19,4 +19,3 @@ npm test
 - `cypress/support/`: Comandos personalizados y configuraciones
 - `TEMPLATECYPRESS/PromptQA.txt`: Prompt de QA experto en pruebas automatizadas con Cypress (Para usar con copilot)
 - `TEMPLATECYPRESS/notas.txt` : Lista de comandos de git/gitbash y  comandos mas usados en Cypress
-- "Marisol te amo"
