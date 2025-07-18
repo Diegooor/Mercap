@@ -1,0 +1,286 @@
+Principales Slash Commands de github copilot 
+
+/doc: Añade comentarios explicativos a tu código.
+/explain: Describe paso a paso lo que hace el código seleccionado.
+/review: Analiza el código y sugiere mejoras.
+/test: Crea automáticamente pruebas unitarias.
+/fix: Sugiere y aplica correcciones.
+/scaffold: Genera la estructura inicial de un archivo o proyecto.
+/search: Encuentra fragmentos de código relacionados.
+/run: Ejecuta comandos en el entorno.
+/terminal: Explica comandos o resultados del terminal.
+/error: Ayuda a entender y corregir errores de pruebas.
+
+
+
+Comandos de Navegación y Gestión de Archivos en la Consola
+
+
+pwd (Print Working Directory): 📍 Muestra la ruta completa del directorio actual en el que te encuentras.
+ls (List): listdir Lista el contenido del directorio actual (archivos y carpetas).
+ls -l: Muestra una lista detallada (permisos, propietario, tamaño, fecha de modificación).
+ls -a: Muestra todos los archivos, incluyendo los ocultos (aquellos que empiezan con un punto, como .git).
+cd [directorio] (Change Directory): ➡️ Cambia al directorio especificado.
+cd ..: Sube un nivel (al directorio padre).
+cd ~ o cd: Va a tu directorio "home" (inicio).
+cd /: Va al directorio raíz del sistema.
+cd nombre_directorio: Entra a una carpeta dentro del directorio actual.
+cd "nombre con espacios": Para directorios con espacios en el nombre, usa comillas.
+mkdir [nombre_directorio] (Make Directory): 📂 Crea un nuevo directorio.
+rmdir [nombre_directorio] (Remove Directory): 🗑️ Elimina un directorio vacío. Para eliminar directorios con contenido, usa rm -r.
+rm [archivo] (Remove): ❌ Elimina un archivo.
+rm -r [directorio]: Elimina un directorio y todo su contenido (¡úsalo con mucho cuidado!).
+rm -f [archivo]: Fuerza la eliminación sin pedir confirmación (¡aún más cuidado!).
+cp [origen] [destino] (Copy): 🐑 Copia archivos o directorios.
+cp archivo.txt copia_archivo.txt: Copia un archivo.
+cp -r directorio/ nuevo_directorio/: Copia un directorio y su contenido.
+mv [origen] [destino] (Move): 🚚 Mueve o renombra archivos o directorios.
+mv archivo.txt nuevo_nombre.txt: Renombra un archivo.
+mv archivo.txt directorio/: Mueve un archivo a un directorio.
+mv directorio/ otro_lugar/: Mueve un directorio.
+touch [archivo] : ✨ Crea un archivo vacío si no existe, o actualiza su fecha de modificación si ya existe.
+cat [archivo] (Concatenate): 📜 Muestra el contenido de un archivo en la consola. También se puede usar para unir archivos.
+less [archivo] o more [archivo]: 📄 Muestra el contenido de un archivo de forma paginada, permitiéndote navegar por él (útil para archivos grandes). Presiona q para salir.
+head [archivo]: 🔝 Muestra las primeras líneas de un archivo. Por defecto, 10 líneas.
+head -n 5 archivo.txt: Muestra las primeras 5 líneas.
+tail [archivo]: 🔚 Muestra las últimas líneas de un archivo. Por defecto, 10 líneas.
+tail -n 5 archivo.txt: Muestra las últimas 5 líneas.
+tail -f archivo.log: Muestra las últimas líneas y sigue mostrando las nuevas líneas que se añaden al archivo en tiempo real (muy útil para ver logs).
+clear: 🧹 Limpia la pantalla de la consola.
+history: ⏪ Muestra un historial de los comandos que has ejecutado.
+man [comando] (Manual): 📖 Muestra la página del manual para un comando específico, donde encontrarás información detallada sobre su uso y opciones.
+echo "[texto]": 🗣️ Muestra un texto en la consola. Útil para scripts o para mostrar el valor de variables.
+echo "Hola Mundo" > archivo.txt: Escribe "Hola Mundo" en archivo.txt (sobrescribe el contenido).
+echo "Otra línea" >> archivo.txt: Añade "Otra línea" al final de archivo.txt
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMADOS DE GIT BASH
+
+git init: 🏁 Inicializa un nuevo repositorio de Git en el directorio actual. Es el primer comando que usas cuando empiezas un nuevo proyecto con Git.
+git clone [URL]: 🐑 Copia un repositorio existente desde una URL a tu máquina local.
+git add [archivo]: ➕ Añade cambios de un archivo al área de preparación (staging area). Puedes usar git add . para añadir todos los archivos modificados y nuevos.
+git commit -m "[mensaje]": 💾 Guarda los cambios preparados en el historial del repositorio con un mensaje descriptivo.
+git status: 📊 Muestra el estado de los archivos en el directorio de trabajo y en el área de preparación (archivos modificados, preparados, sin seguimiento, etc.).
+git log: 📜 Muestra el historial de commits del repositorio.
+git pull: 📥 Obtiene los últimos cambios del repositorio remoto y los fusiona (merge) con tu rama actual. Es una combinación de git fetch y git merge.
+git push: 📤 Envía tus commits locales al repositorio remoto.
+git branch: 🌿 Lista todas las ramas locales. Con git branch [nombre-rama] creas una nueva rama. Con git branch -d [nombre-rama] eliminas una rama.
+git checkout [nombre-rama]: ⇆ Cambia a una rama diferente. También se usa para restaurar archivos del directorio de trabajo (git checkout -- [archivo]).
+git merge [nombre-rama]: 🤝 Fusiona los cambios de una rama específica en tu rama actual.
+git remote -v: 🌐 Lista los repositorios remotos configurados junto con sus URLs. Con git remote add [nombre] [URL] añades un nuevo remoto.
+git fetch: 🚚 Descarga los cambios de un repositorio remoto pero no los fusiona automáticamente en tu rama actual. Te permite revisar los cambios antes de integrarlos.
+git diff: 👀 Muestra las diferencias entre los archivos que aún no has preparado. git diff --staged muestra las diferencias entre los archivos preparados y el último commit.
+git reset [archivo]: ↩️ Saca un archivo del área de preparación, pero mantiene los cambios en tu directorio de trabajo. git reset --hard descarta todos los cambios desde el último commit. (¡Úsalo con cuidado!).
+git stash: 📦 Guarda temporalmente los cambios que no están listos para ser commiteados, permitiéndote cambiar de rama o trabajar en otra cosa. git stash pop aplica los cambios guardados y los elimina del stash.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMADOS MAS USADOS EN CYPRESS
+
+
+
+Estos comandos forman el núcleo de la interacción con la aplicación y la validación de su comportamiento.
+
+1. Comandos de Navegación y Visita
+cy.visit(url)
+
+Descripción: Navega a una URL específica. Es el punto de partida para la mayoría de las pruebas.
+Ejemplo:
+JavaScript
+
+cy.visit('https://www.ejemplo.com/login');
+cy.go(direction)
+
+Descripción: Navega hacia adelante o hacia atrás en el historial del navegador.
+Ejemplo:
+JavaScript
+
+cy.go('back'); // Navega hacia atrás
+cy.go('forward'); // Navega hacia adelante
+cy.reload()
+
+Descripción: Recarga la página actual. Útil para restablecer el estado o verificar el comportamiento después de una acción.
+Ejemplo:
+JavaScript
+
+cy.reload();
+2. Comandos de Selección y Consulta de Elementos
+Estos son esenciales para encontrar elementos con los que interactuar en la página. Siempre prioriza el uso de selectores robustos como data-cy, data-testid, IDs o clases únicas y estables.
+
+cy.get(selector)
+
+Descripción: Obtiene uno o más elementos del DOM que coinciden con un selector CSS. Es el comando más fundamental para seleccionar elementos.
+Ejemplo:
+JavaScript
+
+cy.get('input[name="username"]'); // Por atributo name
+cy.get('#login-button'); // Por ID
+cy.get('.product-card'); // Por clase
+cy.get('[data-cy="submit-button"]'); // Por atributo data-cy (¡recomendado!)
+cy.contains(selector, content)
+
+Descripción: Obtiene el primer elemento del DOM que contiene el texto especificado. Puede combinarse con un selector para ser más específico.
+Ejemplo:
+JavaScript
+
+cy.contains('Bienvenido'); // Encuentra un elemento con el texto "Bienvenido"
+cy.contains('h1', 'Título de Página'); // Encuentra un <h1> con el texto "Título de Página"
+cy.get('.error-message').contains('Campo requerido'); // Encadenado: encuentra el mensaje de error que contiene "Campo requerido"
+3. Comandos de Interacción con Elementos
+Una vez que has seleccionado un elemento, estos comandos te permiten simular la interacción del usuario.
+
+cy.click()
+
+Descripción: Hace clic en el elemento encontrado previamente.
+Ejemplo:
+JavaScript
+
+cy.get('[data-cy="login-button"]').click();
+cy.type(text)
+
+Descripción: Escribe texto en un campo de entrada, área de texto, etc.
+Ejemplo:
+JavaScript
+
+cy.get('#username').type('miusuario');
+cy.get('#password').type('micontraseña{enter}'); // {enter} para simular presionar Enter
+cy.clear()
+
+Descripción: Borra el contenido de un campo de entrada o área de texto.
+Ejemplo:
+JavaScript
+
+cy.get('#search-input').clear();
+cy.check()
+
+Descripción: Marca un checkbox o un radio button.
+Ejemplo:
+JavaScript
+
+cy.get('#terms-checkbox').check();
+cy.uncheck()
+
+Descripción: Desmarca un checkbox.
+Ejemplo:
+JavaScript
+
+cy.get('#newsletter-subscription').uncheck();
+cy.select(value)
+
+Descripción: Selecciona una opción en un <select> dropdown por su valor, texto o índice.
+Ejemplo:
+JavaScript
+
+cy.get('#country-select').select('ES'); // Por valor
+cy.get('#country-select').select('España'); // Por texto
+cy.get('#country-select').select(0); // Por índice (primera opción)
+cy.focus() / cy.blur()
+
+Descripción: Simula el enfoque y desenfoque de un elemento. Útil para probar comportamientos al interactuar con formularios.
+Ejemplo:
+JavaScript
+
+cy.get('#username').focus();
+cy.get('#username').blur();
+4. Comandos de Aserción (Validación)
+Las aserciones son cruciales para verificar que el estado de la aplicación es el esperado después de una serie de acciones. Cypress utiliza la sintaxis de Chai y jQuery.
+
+should(chainers)
+
+Descripción: Realiza una aserción sobre el sujeto anterior de la cadena de comandos. Es la forma más común de validar en Cypress.
+Ejemplo:
+JavaScript
+
+cy.get('.success-message').should('be.visible'); // El elemento debe ser visible
+cy.get('#item-count').should('have.text', '5'); // El elemento debe tener el texto "5"
+cy.get('input[name="email"]').should('have.value', 'test@example.com'); // El input debe tener ese valor
+cy.url().should('include', '/dashboard'); // La URL debe incluir "/dashboard"
+cy.get('.item').should('have.length', 3); // Debe haber 3 elementos con la clase "item"
+cy.get('#submit-button').should('be.disabled'); // El botón debe estar deshabilitado
+and(chainers)
+
+Descripción: Encadena múltiples aserciones sobre el mismo sujeto.
+Ejemplo:
+JavaScript
+
+cy.get('.alert').should('be.visible').and('contain.text', 'Operación exitosa');
+expect(subject).to.be... / expect(subject).to.have...
+
+Descripción: Permite hacer aserciones de forma más explícita utilizando la sintaxis de Chai. A menudo se usa con valores obtenidos de la aplicación, no directamente con elementos del DOM.
+Ejemplo:
+JavaScript
+
+cy.get('#item-count').invoke('text').then(text => {
+    expect(parseInt(text)).to.be.greaterThan(0);
+});
+5. Comandos de Utilidad y Flujo de Control
+cy.wait(duration) o cy.wait(alias)
+
+Descripción: Pausa la ejecución de la prueba por un tiempo específico (en milisegundos) o espera que una petición de red con alias se complete. Se recomienda evitar cy.wait() por tiempo fijo y usar cy.wait(alias) para peticiones de red o aserciones que automáticamente reintentan hasta que la condición se cumple.
+Ejemplo:
+JavaScript
+
+cy.wait(2000); // Espera 2 segundos (¡usar con precaución!)
+cy.intercept('GET', '/api/users').as('getUsers');
+cy.visit('/users');
+cy.wait('@getUsers'); // Espera a que la petición getUsers se complete
+cy.intercept(method, url, response)
+
+Descripción: Permite interceptar, modificar y simular respuestas de peticiones de red (XHR/Fetch). Es increíblemente poderoso para pruebas de integración y para aislar componentes.
+Ejemplo:
+JavaScript
+
+// Mockear una respuesta de API
+cy.intercept('GET', '/api/products', { fixture: 'products.json' }).as('getProducts');
+cy.visit('/products');
+cy.wait('@getProducts');
+
+// Simular un error de API
+cy.intercept('POST', '/api/order', { statusCode: 500, body: { error: 'Server Error' } }).as('postOrderError');
+cy.request(method, url, body)
+
+Descripción: Realiza una petición HTTP directamente desde Cypress. Es útil para preparar datos de prueba, limpiar la base de datos o interactuar con APIs sin pasar por la interfaz de usuario.
+Ejemplo:
+JavaScript
+
+cy.request('POST', '/api/reset-db'); // Reiniciar la base de datos antes de una prueba
+cy.request('GET', '/api/users/1').its('body').then(user => {
+    expect(user.name).to.equal('Juan');
+});
+cy.log(message)
+
+Descripción: Imprime un mensaje en la consola de la prueba en el Test Runner de Cypress. Útil para depuración.
+Ejemplo:
+JavaScript
+
+cy.log('Inicio de la prueba de inicio de sesión');
+cy.fixture(filePath)
+
+Descripción: Carga datos de un archivo de fixture (generalmente JSON). Ideal para datos de prueba estáticos y complejos.
+Ejemplo:
+JavaScript
+
+cy.fixture('testUser.json').then(user => {
+    cy.get('#username').type(user.username);
+    cy.get('#password').type(user.password);
+});
+cy.screenshot(fileName)
+
+Descripción: Toma una captura de pantalla. Las capturas se toman automáticamente en caso de fallos, pero este comando permite tomarlas en puntos específicos.
+Ejemplo:
+JavaScript
+
+cy.get('.modal').screenshot('modal-visible');
+Consejos Adicionales como Ingeniero QA Experto en Cypress:
+
+Encadenamiento de Comandos: Cypress funciona con un patrón de encadenamiento. Cada comando devuelve un "sujeto" sobre el cual puedes aplicar el siguiente comando.
+Reintentos Automáticos: Muchos comandos de Cypress (como cy.get(), cy.contains(), y las aserciones should()) reintentan automáticamente durante un tiempo determinado hasta que el elemento aparece o la aserción se cumple. Esto reduce la necesidad de cy.wait() innecesarios.
+Selectores Robustos: Insisto en el uso de data-cy, data-testid o IDs para seleccionar elementos. Son los más estables y menos propensos a romperse con cambios en el CSS o la estructura del DOM.
+Comandos Personalizados: Una vez que te familiarices con estos comandos básicos, explora la creación de Cypress.Commands.add() para encapsular lógica repetitiva y mejorar la legibilidad y mantenibilidad de tus pruebas.
+
+
+
