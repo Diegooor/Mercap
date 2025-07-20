@@ -1,0 +1,12 @@
+Principales Slash Commands de github copilot 
+
+/doc: Añade comentarios explicativos a tu código.
+/explain: Describe paso a paso lo que hace el código seleccionado.
+/review: Analiza el código y sugiere mejoras.
+/test: Crea automáticamente pruebas unitarias.
+/fix: Sugiere y aplica correcciones.
+/scaffold: Genera la estructura inicial de un archivo o proyecto.
+/search: Encuentra fragmentos de código relacionados.
+/run: Ejecuta comandos en el entorno.
+/terminal: Explica comandos o resultados del terminal.
+/error: Ayuda a entender y corregir errores de pruebas.

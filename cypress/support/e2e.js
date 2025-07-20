@@ -15,3 +15,4 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+require ('cypress-xpath') // para usar xpath en los tests

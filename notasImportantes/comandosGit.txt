@@ -1,0 +1,18 @@
+COMANDOS DE GIT BASH
+
+git init: 🏁 Inicializa un nuevo repositorio de Git en el directorio actual. Es el primer comando que usas cuando empiezas un nuevo proyecto con Git.
+git clone [URL]: 🐑 Copia un repositorio existente desde una URL a tu máquina local.
+git add [archivo]: ➕ Añade cambios de un archivo al área de preparación (staging area). Puedes usar git add . para añadir todos los archivos modificados y nuevos.
+git commit -m "[mensaje]": 💾 Guarda los cambios preparados en el historial del repositorio con un mensaje descriptivo.
+git status: 📊 Muestra el estado de los archivos en el directorio de trabajo y en el área de preparación (archivos modificados, preparados, sin seguimiento, etc.).
+git log: 📜 Muestra el historial de commits del repositorio.
+git pull: 📥 Obtiene los últimos cambios del repositorio remoto y los fusiona (merge) con tu rama actual. Es una combinación de git fetch y git merge.
+git push: 📤 Envía tus commits locales al repositorio remoto.
+git branch: 🌿 Lista todas las ramas locales. Con git branch [nombre-rama] creas una nueva rama. Con git branch -d [nombre-rama] eliminas una rama.
+git checkout [nombre-rama]: ⇆ Cambia a una rama diferente. También se usa para restaurar archivos del directorio de trabajo (git checkout -- [archivo]).
+git merge [nombre-rama]: 🤝 Fusiona los cambios de una rama específica en tu rama actual.
+git remote -v: 🌐 Lista los repositorios remotos configurados junto con sus URLs. Con git remote add [nombre] [URL] añades un nuevo remoto.
+git fetch: 🚚 Descarga los cambios de un repositorio remoto pero no los fusiona automáticamente en tu rama actual. Te permite revisar los cambios antes de integrarlos.
+git diff: 👀 Muestra las diferencias entre los archivos que aún no has preparado. git diff --staged muestra las diferencias entre los archivos preparados y el último commit.
+git reset [archivo]: ↩️ Saca un archivo del área de preparación, pero mantiene los cambios en tu directorio de trabajo. git reset --hard descarta todos los cambios desde el último commit. (¡Úsalo con cuidado!).
+git stash: 📦 Guarda temporalmente los cambios que no están listos para ser commiteados, permitiéndote cambiar de rama o trabajar en otra cosa. git stash pop aplica los cambios guardados y los elimina del stash.
