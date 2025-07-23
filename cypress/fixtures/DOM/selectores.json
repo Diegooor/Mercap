@@ -1,0 +1,27 @@
+{
+    "Comentario" : "Este archivo contiene los selectores del login de Abbaco by Mercap",
+    "Url" : {
+        "Dom" : "http://127.0.0.1:5500/index.html"
+    },
+    
+    "elementosYtextos" :{
+        "logoMercap" :"[id='prompt-logo-center']",
+        "welcome" : ".ce89da225",
+        "loginTitle" : ".cb1378234.c27481b92",
+        "texEmail" : "[data-dynamic-label-for='username']",
+        "texPassword" : "[data-dynamic-label-for='password']",
+        "singUpText" : ".c7cdcc8e5.c69350fc5.c11ebb09b"
+
+
+    },
+    "login": {
+        "email" : "[id='username']", 
+        "password" : "[id='password']",
+        "btnContinue" : "[name='action']",
+        "forgotPassword" : ".cdf6f7df0.c02944604.cd0a55bf0", 
+        "singUp" : ".cd0a55bf0:eq(1)",
+        "continueWithGoogle" : "button[data-provider='google']"
+    }
+}
+
+    
