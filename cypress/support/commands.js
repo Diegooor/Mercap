@@ -1,6 +1,6 @@
 
 Cypress.Commands.add("Precondiciones", () => {
-    cy.visit('/index.html'); // Visito la url del login de Abbaco by Mercap por medio del index.html
+    cy.visit('http://127.0.0.1:5500/index.html'); // Visito la url del login de Abbaco by Mercap por medio del index.html
 
     cy.fixture("DOM/selectores").then((selectores) => {
         cy.get(selectores.elementosYtextos.logoMercap).should('be.visible'); // Valido que el logo de Abbaco by Mercap sea visible

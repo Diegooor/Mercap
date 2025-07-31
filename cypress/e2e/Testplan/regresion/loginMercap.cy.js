@@ -133,7 +133,7 @@ describe('Casos de prueba de regresión para el login de Abbaco by Mercap', () =
 
     });
 
-    it.only(`TC ${contador++} - Validar warning cuando se ingresa un mail invalido`, () => {
+    it(`TC ${contador++} - Validar warning cuando se ingresa un mail invalido`, () => {
         
         // Uso expresión regular común para validar emails.
         
