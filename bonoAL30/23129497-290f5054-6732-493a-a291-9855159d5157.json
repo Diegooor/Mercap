@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "231bc7c9-fb09-4885-9cc4-5172b0ddf9af",
+						"id": "c4fad257-6769-4d14-ae2b-a926bd991760",
 						"exec": [
 							"const body = pm.response.json();\r",
 							"\r",
@@ -43,12 +43,14 @@
 							"    pm.expect(body.name).to.include(\"Bono (canje 2020) 2030 u$s Step-up (Ley Argentina) (AL30)\"); \r",
 							"    pm.expect(body.shortName).to.equal(\"AL30\");\r",
 							"    pm.expect(body.debtType).to.equal(\"Título Público\");\r",
-							"    \r",
+							"    pm.expect\r",
 							"});\r",
 							"\r",
 							"pm.test(\"Validar claves del objetto links\", () => {\r",
 							"    pm.expect(body.links).to.have.all.keys('coupons', 'identifiers', 'self', 'issueConditions', 'paymentSummary');\r",
-							"});"
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -64,7 +66,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"shortName\": \"AL30\",\r\n  \"name\": \"Bono (canje 2020) 2030 u$s Step-up (Ley Argentina) (AL30)\",\r\n  \"debtType\": \"Título Público\",\r\n  \"links\": {\r\n    \"coupons\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/coupons\",\r\n    \"identifiers\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/identifiers\",\r\n    \"self\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a\",\r\n    \"issueConditions\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/issue-conditions\",\r\n    \"paymentSummary\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/payment-summary\"\r\n  }\r\n}",
+					"raw": "\r\n// Response esperado.\r\n\r\n/*{\r\n  \"shortName\": \"AL30\",\r\n  \"name\": \"Bono (canje 2020) 2030 u$s Step-up (Ley Argentina) (AL30)\",\r\n  \"debtType\": \"Título Público\",\r\n  \"links\": {\r\n    \"coupons\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/coupons\",\r\n    \"identifiers\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/identifiers\",\r\n    \"self\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a\",\r\n    \"issueConditions\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/issue-conditions\",\r\n    \"paymentSummary\": \"{{LOCATION}}/bonds/ecfe885d-8163-4222-acb1-f7020cf05a4a/payment-summary\"\r\n  }\r\n}*/",
 					"options": {
 						"raw": {
 							"language": "json"
